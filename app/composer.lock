@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d4bfe064e850765c32dc3669d51bb80",
+    "content-hash": "23bf5886adda87cf5cf68c260ced756d",
     "packages": [
         {
             "name": "brick/math",
@@ -2507,6 +2507,38 @@
                 }
             ],
             "time": "2024-11-21T10:39:51+00:00"
+        },
+        {
+            "name": "osmianski/package",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../package",
+                "reference": "1c481ebc86eed49f6da8280d4f9bcdbd3f16d65c"
+            },
+            "require": {
+                "illuminate/support": "^12",
+                "php": ">=8.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Osmianski\\Package\\PackageServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Osmianski\\Package\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "phpoption/phpoption",
@@ -9007,7 +9039,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "osmianski/package": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

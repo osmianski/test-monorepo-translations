@@ -1,0 +1,23 @@
+{
+    "name": "osmianski/package",
+    "type": "library",
+    "require": {
+        "php": ">=8.3",
+        "illuminate/support": "^12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Osmianski\\Package\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Osmianski\\Package\\PackageServiceProvider"
+            ]
+        }
+    }
+}
