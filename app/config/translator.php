@@ -21,7 +21,7 @@ return [
     | This is the path where your translation files are stored. In a standard Laravel installation, you should not need to change it.
     |
     */
-    'lang_path' => lang_path(),
+    'lang_path' => base_path('../package/lang'),
 
     /*
     |--------------------------------------------------------------------------
@@ -47,6 +47,7 @@ return [
     |
     */
     'locales' => LocaleValidator::class,
+    //'locales' => ['en', 'de', 'lt'],
 
     /*
     |--------------------------------------------------------------------------
@@ -82,14 +83,14 @@ return [
          * Supported: 'openai', 'deepl', 'MyOwnServiceClass::name'
          * Define your own service using the class's name: 'MyOwnServiceClass::class'
          */
-        'service' => null,
+        'service' => 'openai',
         'services' => [
             'openai' => [
                 'model' => 'gpt-4o-mini',
                 'prompt' => "
-                            As an experienced copywriter and translator specializing in website copy, your task is to translate the provided content from a specific website. 
-                            Your translations should maintain the original tone while being adapted to the target language, ensuring they are both relevant and clear. 
-                            The content will be provided in JSON format, and you must translate it to the locale '{targetLocale}'. 
+                            As an experienced copywriter and translator specializing in website copy, your task is to translate the provided content from a specific website.
+                            Your translations should maintain the original tone while being adapted to the target language, ensuring they are both relevant and clear.
+                            The content will be provided in JSON format, and you must translate it to the locale '{targetLocale}'.
                             Ensure that all JSON keys remain preserved and unchanged.
                             ",
             ],
@@ -110,7 +111,7 @@ return [
          * Supported: 'openai', 'MyOwnServiceClass::name'
          * Define your own service using the class's name: 'MyOwnServiceClass::class'
          */
-        'service' => null,
+        'service' => 'openai',
         'services' => [
             'openai' => [
                 'model' => 'gpt-4o-mini',
@@ -146,6 +147,7 @@ return [
         'paths' => [
             app_path(),
             resource_path(),
+            base_path('../package/src'),
         ],
 
         /**

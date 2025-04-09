@@ -1,2 +1,2 @@
-{{ __('messages.hello') }}
+{{ __('app::messages.hello') }}
 {{ say_world() }}
