@@ -2,5 +2,5 @@
 
 function say_world(): string
 {
-    return __('app::messages.world');
+    return __('messages.world');
 }

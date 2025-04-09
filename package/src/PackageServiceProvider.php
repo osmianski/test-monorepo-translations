@@ -8,6 +8,6 @@ class PackageServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        $this->loadTranslationsFrom(__DIR__.'/../lang', 'app');
+        $this->loadTranslationsFrom(__DIR__.'/../lang');
     }
 }
